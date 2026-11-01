@@ -1,16 +1,71 @@
 # LonoMacro
 
-LonoMacro is a macro keypad ecosystem with an OLED-equipped BLE master, a
-keypad slave, and a rotary-encoder slave.
+LonoMacro is a modular macro keypad built around three XIAO nRF52840 boards:
+an OLED-equipped master, a keypad slave, and a rotary-encoder slave. The master
+connects to a computer over USB-C and to the slaves over Bluetooth Low Energy
+(BLE). Slave inputs are forwarded to the computer as USB keyboard events.
 
-## Firmware
+## Project files
 
-The three XIAO nRF52840 sketches, pin assignments, and pairing instructions are
-in [`firmware/`](firmware/). Connect the master to the computer over USB-C; it
-connects to the keypad and rotary slaves over BLE and forwards their inputs to
-the computer.
+- [`PCB/`](PCB/) — KiCad schematic, PCB layout, and project files.
+- [`CAD/`](CAD/) — 3D STEP models.
+- [`Production/`](Production/) — Gerber, drill, and STL manufacturing files.
+- [`firmware/`](firmware/) — Arduino sketches for the master and both slaves.
+- [`BOM.csv`](BOM.csv) — Bill of materials, prices, and supplier search links.
+
+## Firmware setup
+
+Install the ArduinoBLE, Adafruit GFX, and Adafruit SSD1306 libraries. Select a
+XIAO nRF52840 Arduino board package that supports USB keyboard output for the
+master. Compile and upload the corresponding sketch to each board:
+
+- [OLED master](firmware/OLED_Master/OLED_Master.ino)
+- [Keypad slave](firmware/Keypad_Slave/Keypad_Slave.ino)
+- [Rotary slave](firmware/Rotary_Slave/Rotary_Slave.ino)
+
+The master expects an SSD1306 I2C OLED at address `0x3C`.
+
+## Pairing and controls
+
+1. Connect the OLED master to the computer over USB-C.
+2. Press the 6 mm pairing button on each slave: SW5 on the keypad and SW7 on
+   the rotary encoder. The corresponding slave LED blinks while it advertises.
+3. Press the 6 mm pairing/connect button on the master (SW8). The master LED
+   blinks while it searches, and the OLED shows each slave's connection status.
+   When both slaves are connected, the master LED and both slave LEDs stay on.
+4. Press SW1–SW4 to send the number keys `1`–`4`. Rotate the encoder to send
+   Up/Down arrow keys; press the encoder (SW6) to send Enter.
+
+The master LED is solid when both slaves are connected and pulses when it
+receives an input. A connected slave LED is solid and pulses when it sends an
+input. If a slave disconnects, press its pairing button and then press SW8 on
+the master to reconnect.
+
+## OLED and battery status
+
+The OLED-equipped master is intended to show the connected macropads and their
+battery levels. A future status screen could include the time and date, for
+example:
+
+```text
+10:00 PM              1/11/26
+----------------------------
+Rotary Encoder          50%
+Keypad                   5%
+```
+
+The current firmware displays connection status and recent input events; it
+does not yet report slave battery levels or show a clock. Battery reporting and
+time display will require additional firmware and, for the clock, a time source.
+The master can be powered from the computer's USB-C connection. The slave
+macropads are intended to use lithium-ion batteries; battery and charging
+hardware should be selected to match the final design.
 
 ## Bill of materials
+
+Prices are the listed prices per BOM row, including grouped quantities. They
+are estimates, may change, and **do not include shipping**. The case price is
+approximate; purchase links are supplier search pages.
 
 | Reference | Qty | Name | Price | Buy link |
 |---|---:|---|---:|---|
@@ -27,10 +82,6 @@ the computer.
 | — | 1 | 3D Printed Case | ~$15.00 | — |
 |  |  | **Estimated total** | **~$44.70** |  |
 
-The total doesnt include shipping
+## CAD
 
-## Control
-
-1. Connect the master to the computer using USB-C.
-
-2. Pressed the 6mm button on the slave to connect to oth
+[Open the LonoMacro Onshape document](https://cad.onshape.com/documents/b238660379d2ad484aa23eea/w/9873678c9d89b1b19152732d/e/ca0627a1691ab6fd1505dec4).
