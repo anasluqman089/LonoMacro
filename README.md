@@ -67,20 +67,20 @@ Prices are the listed prices per BOM row, including grouped quantities. They
 are estimates, may change, and **do not include shipping**. The case price is
 approximate; purchase links are supplier search pages.
 
-| Reference | Qty | Name | Price | Buy link |
-|---|---:|---|---:|---|
-| D1, D2, D3 | 3 | 5mm LED | $0.30 | [Search](https://www.aliexpress.com/w/wholesale-5mm-LED.html) |
-| J1 | 1 | 01x04 Pin Header | $0.20 | [Search](https://www.aliexpress.com/w/wholesale-01x04-Pin-Header.html) |
-| J2, J3, J4 | 3 | 01x02 JST PH Connector | $0.45 | [Search](https://www.aliexpress.com/w/wholesale-01x02-JST-PH-Connector.html) |
-| R1, R2, R3 | 3 | 220 Film Resistor | $0.15 | [Search](https://www.aliexpress.com/w/wholesale-220-Film-Resistor.html) |
-| SW1, SW2, SW3, SW4 | 4 | Cherry MX keyboard switch | $1.00 | [Search](https://www.aliexpress.com/w/wholesale-Cherry-MX-keyboard-switch.html) |
-| SW5, SW7, SW8 | 3 | 6 mm THT switch | $0.30 | [Search](https://www.aliexpress.com/w/wholesale-6-mm-THT-switch.html) |
-| SW6 | 1 | Rotary Encoder | $0.30 | [Search](https://www.aliexpress.com/w/wholesale-Rotary-Encoder.html) |
-| U1, U2, U3 | 3 | XIAO-nRF52840 | $5.00 | [Search](https://www.aliexpress.com/w/wholesale-XIAO-nRF52840.html) |
-| — | 1 | 1.3 Inch OLED Screen | $10.00 | [Search](https://www.aliexpress.com/w/wholesale-1.3-Inch-OLED-Screen.html) |
-| — | 1 | PCB | $12.00 | — |
-| — | 1 | 3D Printed Case | ~$15.00 | — |
-|  |  | **Estimated total** | **~$44.70** |  |
+| Component | Qty | Real Unit Price (USD) | Total Market Price (USD) | Reference Links |
+| :--- | :---: | :---: | :---: | :--- |
+| **XIAO-nRF52840** (Standard) | 3 | \$9.99 | **\$29.97** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-XIAO-nRF52840.html) |
+| **Cherry MX Keyboard Switch** | 4 | \$0.60 | **\$2.40** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-Cherry-MX-keyboard-switch.html) |
+| **1.3 Inch OLED Screen** | 1 | \$4.00 | **\$4.00** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-1.3-Inch-OLED-Screen.html) |
+| **Rotary Encoder EC11** | 1 | \$0.50 | **\$0.50** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-Rotary-Encoder.html) |
+| **5mm LED** | 3 | \$0.10 | **\$0.30** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-5mm-LED.html) |
+| **01x02 JST PH Connector** | 3 | \$0.15 | **\$0.45** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-01x02-JST-PH-Connector.html) |
+| **220 Film Resistor** | 3 | \$0.05 | **\$0.15** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-220-Film-Resistor.html) |
+| **6 mm THT Switch** | 3 | \$0.10 | **\$0.30** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-6-mm-THT-switch.html) |
+| **01x04 Pin Header** | 1 | \$0.20 | **\$0.20** | [Search AliExpress](https://www.aliexpress.com/w/wholesale-01x04-Pin-Header.html) |
+| **PCB Fabrication** | 1 | \$12.00 | **\$12.00** | — |
+| **3D Printed Case** | 1 | \$15.00 | **\$15.00** | — |
+| **Estimated Real Total** | | | **~\$65.27** | |
 
 ## CAD
 
