@@ -85,3 +85,25 @@ approximate; purchase links are supplier search pages.
 ## CAD
 
 [Open the LonoMacro Onshape document](https://cad.onshape.com/documents/b238660379d2ad484aa23eea/w/9873678c9d89b1b19152732d/e/ca0627a1691ab6fd1505dec4).
+
+## Image 
+
+### Scematic
+
+<img width="793" height="499" alt="image" src="https://github.com/user-attachments/assets/40ca9d71-f68a-444f-8217-ba86c89d7b63" />
+
+### PCB
+
+<img width="791" height="223" alt="image" src="https://github.com/user-attachments/assets/6e6a18c0-1379-469a-ac1d-6c32d99a5028" />
+
+<img width="1032" height="314" alt="image" src="https://github.com/user-attachments/assets/1248f867-c57b-408c-899a-0973be28b630" />
+
+### CAD
+
+<img width="732" height="504" alt="image" src="https://github.com/user-attachments/assets/7ee86a70-2a26-4a46-a51a-0cd0bf6bc99d" />
+
+## Extra
+
+This project is made for Fabricate, a YSWS program by Hack Club
+
+[Project](https://fabricate.hackclub.com/projects/699).
